@@ -7,41 +7,48 @@
 
 body {
     height: 100vh;
+    background-color: #000000;
 }
 
-main {
+.fundo {
     width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.main-text {
-    position: absolute;
+    background-color: #000000a1;
+    font-weight: 800;
+    color: white;
+    height: 85vh;
     display: flex;
-    width: 100%;
-    /* height: 100vh; */
-    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.divBonita {
+    background: url(/img/ezgif-2-1c96fe7648.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
 }
 
+.cada-passo {
+    display: flex;
+}
 
+.passos {
+    display: flex;
+    margin: 16px 0;
+}
 
-
-
-
-
-
-
-
+.tutorial {
+    width: 85%;
+    color: white;
+    padding: 34px;
+    margin: 40px auto;
+    border-radius: 15px;
+    display: flex;
+    border: 5px solid #00c3ff;
+    flex-direction: column;
+    align-items: center;
+}
 
 nav {
     display: flex;
@@ -49,8 +56,6 @@ nav {
     width: 100%;
     background: #000000;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 50px 0 100px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -63,8 +68,8 @@ nav .logo {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
@@ -130,26 +135,30 @@ input[type="checkbox"] {
 
 .fundo {
     width: 100%;
-    background-color: #000000a1;
-    color: white;
-    height: 100vh;
+    background-color: #00000086;
+    color: rgb(255, 255, 255);
+    height: 85vh;
     padding-left: 67px;
+    border-bottom: 45px solid #00c3ff;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.fundo h3{
+.fundo h3 {
     font-size: 2em;
 }
+
 .fundo h2 {
     font-size: 3em;
     margin-bottom: 18px;
 }
+
 .fundo p {
     margin-top: 10px;
 }
+
 header img {
     height: 10vh;
     border-radius: 50%;
@@ -157,18 +166,21 @@ header img {
 }
 
 button a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+}
 
+#comecar a {
+    color: rgb(0, 0, 0);
 }
 
 button a:hover {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 button a:visited {
-    color: white;
+    color: rgb(255, 255, 255);
 
 }
 
@@ -179,7 +191,7 @@ button a:visited {
     padding: 10px;
     border: none;
     outline: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
     cursor: pointer;
     position: relative;
@@ -188,9 +200,24 @@ button a:visited {
     border-radius: 10px;
 }
 
+.passos h2 {
+    font-size: 2em;
+}
+
+.passos h1 {
+    font-weight: bold;
+    color: #00c3ff;
+    font-size: 3em;
+    margin: 10px;
+}
+
+.passos span {
+    font-size: 1.5em;
+}
+
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #145de4, #3874eb, #5b8bf2, #4d76dd, #436ff5, #2cc0c5, #0080ff, #4393e4, #318CE7);
+    background: linear-gradient(45deg, #4f8dff, #8ea9df, #5b8bf2, #4d76dd, #436ff5, #2cc0c5, #0080ff, #4393e4, #318CE7);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -206,7 +233,7 @@ button a:visited {
 }
 
 .glow-on-hover:active {
-    color: #000
+    color: rgb(0, 0, 0)
 }
 
 .glow-on-hover:active:after {
@@ -227,6 +254,10 @@ button a:visited {
     left: 0;
     top: 0;
     border-radius: 10px;
+}
+
+#comecar:after {
+    background: rgb(255, 255, 255);
 }
 
 @keyframes glowing {
@@ -252,30 +283,45 @@ button a:visited {
 
 
 
-@media (max-width: 1000px) {
-    nav {
-        padding: 0 40px 0 50px;
+@media (max-width: 370px) {
+    .passos h1 {
+        display: none;
     }
 }
 
 @media (max-width: 920px) {
+    .passos {
+        flex-wrap: wrap;
+    }
+
+    .cada-passo {
+        margin: 5px 0;
+    }
+
     .fundo {
-        padding: 67px;
+        padding: 20px;
         align-items: center;
     }
-    .fundo h3{
+
+    .fundo h3 {
         font-size: 1.3em;
     }
-    .fundo h2{
+
+    .fundo h2 {
         font-size: 2em;
     }
-    .fundo p{
+
+    .fundo p {
         font-size: 0.8em;
+        text-align: center;
+        width: 81%;
     }
+
     .glow-on-hover {
         width: 215px;
         height: 51px;
     }
+
     nav .menu-btn i {
         display: block;
     }
@@ -289,7 +335,8 @@ button a:visited {
     }
 
     nav {
-        justify-content: space-between;
+        justify-content: space-around;
+        padding: 0;
     }
 
     #click:checked~.menu-btn i:before {
@@ -297,12 +344,14 @@ button a:visited {
     }
 
     nav ul {
-        position: fixed;
+        z-index: 5;
+        position: absolute;
         top: 80px;
         left: -100%;
         background: rgb(15, 15, 15);
         height: 100vh;
         width: 100%;
+        border-radius: 0 0 20px 20px;
         text-align: center;
         display: block;
         transition: all 0.3s ease;
