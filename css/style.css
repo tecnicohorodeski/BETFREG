@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -70,6 +72,7 @@ nav ul {
     display: flex;
     list-style: none;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 nav ul li {
@@ -98,7 +101,7 @@ h1 {
 }
 
 span {
-    font-weight: 600;
+    font-weight: bolder;
     color: #00c3ff;
 }
 
@@ -211,8 +214,54 @@ button a:visited {
     margin: 10px;
 }
 
+.termos h1, .tutorial h1 {
+    font-size: 2em;
+}
+
+.termos h1 {
+    color: #00c3ff;
+}
+
 .passos span {
     font-size: 1.5em;
+}
+
+.termo-flex {
+    display: flex;
+}
+
+.termo-parte {
+    width: 50%;
+    margin: 0 10px;
+}
+
+.termo-parte h2 {
+    margin-top: 15px;
+}
+
+.termos {
+    color: white;
+    padding: 50px;
+    display: flex;
+    border-top: 5px solid #00c3ff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-gremio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.div-gremio h5 {
+    font-size: 1em;
+}
+
+.gremio {
+    width: 90px;
+    margin-top: 5px;
 }
 
 .glow-on-hover:before {
@@ -256,6 +305,54 @@ button a:visited {
     border-radius: 10px;
 }
 
+footer {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+footer div p {
+    animation: pulse 5s infinite;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0% {
+        color: #0080ff;
+    }
+    50%{
+        color: #00c3ff;
+    }
+    75% {
+        color: #63adf7;
+    }    
+    100% {
+        color: #0080ff;
+    }
+    
+}
+
+.github img {
+    width: 48px;
+    margin: 0 12px;
+    font-size: 1.5em
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.github a {
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
 #comecar:after {
     background: rgb(255, 255, 255);
 }
@@ -283,15 +380,24 @@ button a:visited {
 
 
 
-@media (max-width: 370px) {
-    .passos h1 {
-        display: none;
-    }
-}
+
 
 @media (max-width: 920px) {
     .passos {
         flex-wrap: wrap;
+    }
+    footer{
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    .termo-flex {
+        flex-direction: column;
+    }
+
+    .termo-parte {
+        width: 100%;
+        margin: 0;
     }
 
     .cada-passo {
@@ -305,10 +411,14 @@ button a:visited {
 
     .fundo h3 {
         font-size: 1.3em;
+        text-align: center;
+
     }
 
     .fundo h2 {
         font-size: 2em;
+        text-align: center;
+
     }
 
     .fundo p {
@@ -349,7 +459,6 @@ button a:visited {
         top: 80px;
         left: -100%;
         background: rgb(15, 15, 15);
-        height: 100vh;
         width: 100%;
         border-radius: 0 0 20px 20px;
         text-align: center;
@@ -383,4 +492,32 @@ button a:visited {
         background: none;
         color: cyan;
     }
+}
+
+@media (max-width: 370px) {
+    .termos {
+        display: block;
+        padding: 20px;
+    }
+
+    .passos h1 {
+        display: none;
+    }
+
+    .fundo h3 {
+        font-size: 1.2em;
+    }
+
+    .fundo p {
+        font-size: 0.5em;
+    }
+
+    .fundo h2 {
+        font-size: 1.8em;
+    }
+
+    .tutorial {
+        padding: 22px;
+    }
+
 }
