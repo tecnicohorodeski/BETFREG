@@ -207,7 +207,7 @@ button a:visited {
     font-size: 2em;
 }
 
-.passos h1 {
+.passos h2 {
     font-weight: bold;
     color: #00c3ff;
     font-size: 3em;
@@ -500,7 +500,7 @@ footer div p {
         padding: 20px;
     }
 
-    .passos h1 {
+    .passos h2 {
         display: none;
     }
 
@@ -512,10 +512,9 @@ footer div p {
         font-size: 0.5em;
     }
 
-    .fundo h2 {
+    .fundo h2, .tutorial h1 {
         font-size: 1.8em;
     }
-
     .tutorial {
         padding: 22px;
     }
